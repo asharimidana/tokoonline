@@ -1,6 +1,6 @@
 // import React, { useState, useEffect } from "react";
 // import Sidebar from "../components/SideBar";
-import MhsList from "./MhsList.js";
+// import MhsList from "./MhsList.js";
 import Banner from "../components/Banner.js";
 import ListProduct from "../components/ListProduct.js";
 // import { Link } from "react-router-dom";
@@ -8,9 +8,8 @@ import ListProduct from "../components/ListProduct.js";
 function HomePage() {
 	return (
 		<div >
-			{< Banner/>}
-			{< ListProduct/>}
-			{< MhsList />}
+			{< Banner />}
+			{< ListProduct />}
 		</div>
 	)
 }

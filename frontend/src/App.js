@@ -1,14 +1,19 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import HomePage from "./Pages/index";
 import Login from "./Pages/Login";
+import NotFound from "./Pages/NotFound";
 import './App.css';
 
 function App() {
 	return (
 		<BrowserRouter>
 			<Routes>
-				<Route path="/" element={<HomePage />} />
 				<Route path="/login" element={<Login/>} />
+				<Route path="/" element={<HomePage />} />
+				<Route path="/utama/:param" element={<HomePage />} />
+
+				<Route path="/404" element={<NotFound/>} />
+				<Route path="/*" element={<Navigate to="/404"/>} />
 			</Routes>
 		</BrowserRouter>
 	);

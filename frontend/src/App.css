@@ -1,3 +1,18 @@
-.aaa{
-	background-color: dark !Important
+.bg-app {
+	background-color: #5c00d5 !Important;
+}
+.text-app {
+	color: #004eff !Important;
+}
+
+/* hover */
+.hov-link>a:hover{
+	background: #f8f9fa;
+	color: #0d6efd !Important;
+}
+
+/* active */
+.hov-link>.nav-link.active{
+	background: #f8f9fa;
+	color: #0d6efd !Important;
 }
