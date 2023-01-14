@@ -16,3 +16,38 @@
 	background: #f8f9fa;
 	color: #0d6efd !Important;
 }
+
+/*text*/
+.text-app-footer>p>a, .text-app-footer>p {
+	color: #d6d6d6 !Important;
+}
+
+.b-white{
+	border-color: white;
+}
+
+.btn-app-secondary{
+	color: grey !Important;
+}
+.btn-app-md{
+	font-size: 1.5rem;
+}
+
+.btn-app-secondary:hover{
+	color: #5c00d5 !Important;
+}
+.icon-area{
+	position: relative;
+}
+.notify {
+	background-color: red;
+	color: white;
+	border-radius: 3rem;
+	padding-left: 5px;
+	padding-right: 5px;
+	font-size: 0.8rem;
+	position: absolute;
+	top: -5px;
+	right: -5px;
+	
+}
