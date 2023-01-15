@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Dropdown from 'react-bootstrap/Dropdown';
 function NavbarApp() {
 	return (
 		<header className="section-heade ">
@@ -8,15 +9,23 @@ function NavbarApp() {
 						<div className="col-xl col-lg col-6 col-sm-6 col-md flex-grow-0">
 							<Link href="#" className="brand-wrap me-3">
 								<>
-									<img className="logo" alt="logo" height={40} src="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/logo.svg" />
+									<img className="logo" alt="logo" height={40} src={process.env.PUBLIC_URL + "/logo.png"} />
 								</>
 							</Link> {/* brand-wrap end.// */}
 						</div> {/* col end.// */} <div className="col-xl col-lg col-6 col-sm-6 col-md flex-grow-0">
 							<div className="dropdown float-end">
-								<button type="button" className="btn btn-outline-primary text-nowrap">
-									<i className="material-icons">menu</i>
-									category
-								</button>
+								<Dropdown>
+									<Dropdown.Toggle variant="btn btn-sm btn-outline-primary text-nowrap" id="dropdown-basic">
+										<i className="material-icons ">sort</i>
+										<small className="mx-2 pb-5">sort</small>
+									</Dropdown.Toggle>
+
+									<Dropdown.Menu>
+										<Dropdown.Item href="chart/action-1">Action</Dropdown.Item>
+										<Dropdown.Item href="/action-2">Another action</Dropdown.Item>
+										<Dropdown.Item href="/action-3">Something else</Dropdown.Item>
+									</Dropdown.Menu>
+								</Dropdown>
 							</div> {/* category-wrap end.// */}
 						</div> {/* col end.// */}
 						<div className="col-xl col-lg-4 col-12 col-sm-12 col-md">
@@ -76,10 +85,10 @@ function NavbarApp() {
 				<div className="container">
 					<ul className="navbar-nav flex-wrap">
 						<li className="nav-item">
-							<Link className="nav-link" href="#">Sales</Link>
+							<Link className="nav-link p-0 px-2" href="#">Sales</Link>
 						</li>
 						<li className="nav-item">
-							<Link className="nav-link" href="#">Electronic</Link>
+							<Link className="nav-link p-0 px-2" href="#">Electronic</Link>
 						</li>
 					</ul>
 				</div> {/* container end.// */}

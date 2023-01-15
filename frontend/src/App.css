@@ -1,6 +1,9 @@
 .bg-app {
 	background-color: #5c00d5 !Important;
 }
+.bg-app-cart{
+	background-color: #0000d78f;
+}
 .text-app {
 	color: #004eff !Important;
 }
@@ -19,7 +22,10 @@
 
 /*text*/
 .text-app-footer>p>a, .text-app-footer>p {
-	color: #d6d6d6 !Important;
+	color: #d6d6d6 ;
+}
+.text-app {
+	color: #5c00d5 !Important ;
 }
 
 .b-white{

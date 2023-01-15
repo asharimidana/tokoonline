@@ -5,13 +5,13 @@ function Footer() {
 			<div className="container ">
 				<div className="row text-mutted">
 					<div className="col-lg-4 text-app-footer">
-						<p className="fw-bold">Contact us</p>
+						<p className="fw-bold text-white">Contact us</p>
 						<p >Jalan xxx.dddd.kota kendari-Sulawesi Tenggara</p>
 						<p >085395499307 / 0123456789012</p>
 						<p >email@gmail.com</p>
 					</div>
 					<div className="col-lg-2 text-app-footer">
-						<p className="fw-bold">Company</p>
+						<p className="fw-bold text-white">Company</p>
 						<p>
 							<Link className="text-decoration-none">Help Center</Link>
 						</p>
@@ -26,7 +26,7 @@ function Footer() {
 						</p>
 					</div>
 					<div className="col-lg-2 text-app-footer">
-						<p className="fw-bold">Service</p>
+						<p className="fw-bold text-white">Service</p>
 						<p>
 							<Link className="text-decoration-none">Help Center</Link>
 						</p>
@@ -41,14 +41,14 @@ function Footer() {
 						</p>
 					</div>
 					<div className="col-lg-2 text-app-footer">
-						<p className="fw-bold">User Center</p>
+						<p className="fw-bold text-white">User Center</p>
 						<p >Register</p>
 						<p >Sign in</p>
 						<p >Restore account</p>
 						<p >Track order</p>
 					</div>
 					<div className="col-lg-2 text-app-footer">
-						<p className="fw-bold">Social</p>
+						<p className="fw-bold text-white">Social</p>
 						<p >Facebook</p>
 						<p >Twitter</p>
 						<p >Instagram</p>
