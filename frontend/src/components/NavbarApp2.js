@@ -10,7 +10,7 @@ function NavbarApp() {
 						<div className="col-xl col-lg col-6 col-sm-6 col-md flex-grow-0">
 							<Link href="#" className="brand-wrap me-3">
 								<>
-									<img className="logo" alt="logo" height={40} src="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/logo.svg" />
+									<img className="logo" alt="logo" height={40} src={process.env.PUBLIC_URL + "/logo.png"} />
 								</>
 							</Link> {/* brand-wrap end.// */}
 						</div> {/* col end.// */} <div className="col-xl col-lg col-6 col-sm-6 col-md flex-grow-0">

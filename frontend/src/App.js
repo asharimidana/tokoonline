@@ -2,9 +2,10 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import HomePage from "./Pages/index";
 import Login from "./Pages/Login";
 import CartList from "./Pages/CartList";
+import Checkout  from "./Pages/Checkout";
 import NotFound from "./Pages/NotFound";
-import './App.css';
 
+import './App.css';
 function App() {
 	return (
 		<BrowserRouter>
@@ -14,6 +15,7 @@ function App() {
 				<Route path="/utama/:param" element={<HomePage />} />
 
 				<Route path="/cart" element={<CartList/>} />
+				<Route path="/checkout" element={<Checkout />} />
 
 				<Route path="/404" element={<NotFound/>} />
 				<Route path="/*" element={<Navigate to="/404"/>} />

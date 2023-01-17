@@ -3,11 +3,11 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom"
 import { CartDb } from "./Cart.js"
 
-function ShoppingList() {
+function ConfirmCheckout() {
+
 	const [counters, setCounters] = useState(
 		CartDb
 	);
-
 	useEffect(() => {
 		console.log(counters)
 	})
@@ -54,6 +54,7 @@ function ShoppingList() {
 			ubahData(jumlah, index)
 		}
 	}
+
 	function handleDecrementClick(index) {
 		const nextCounters = counters.map((c, i) => {
 			if (c.jumlah <= 2) {
@@ -117,11 +118,11 @@ function ShoppingList() {
 						</ol>
 					</nav>
 				</div>
-				<div className="row mb-3">
+				<div className="row mb-3 border">
 					<div className="col-lg-9">
 						{counters.map((data, index) => (
-							<div key={index} className="row card border-0 shadow-sm mb-3">
-								<div className="col-12 p-0 px-2 bg-app-cart text-dark fw-bold d-flex justify-content-between align-items-center">
+							<div key={index} className="row card border-0 ">
+								<div className="col-12 p-0 px-2 bg-light text-dark fw-bold d-flex justify-content-between align-items-center">
 									<div className="d-flex flex-row align-items-center">
 										<Form.Check
 											type="checkbox"
@@ -182,6 +183,18 @@ function ShoppingList() {
 
 					</div>
 					<div className="col-lg-3">
+						<div className="card border-0 shadow-sm mb-4">
+							<div className="card-body">
+								<div className="d-flex py-1 text-secondary">
+									<div style={{ "width": "120px" }}>
+										<input type="text" placeholder='Masukkan Kode'  className='mb-2' name=""  />
+									</div>
+								</div>
+								<Link to={"/checkout"} className='btn btn-sm btn-primary' type="button">
+									Buat Pesanan
+								</Link>
+							</div>
+						</div>
 						<div className="card border-0 shadow-sm">
 							<div className="card-body">
 								<div className="d-flex py-1 text-secondary">
@@ -223,8 +236,9 @@ function ShoppingList() {
 						</div>
 					</div>
 				</div>
+
 			</div>
 		</div>
 	);
 }
-export default ShoppingList;
+export default ConfirmCheckout;

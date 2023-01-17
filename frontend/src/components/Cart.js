@@ -17,6 +17,6 @@ export const CartDb = [
 		"name": "jam tangan digital",
 		"name_toko": "sukses abadi",
 		"description": "deskripsi produk",
-		"harga": "30.000"
+		"harga": "30000"
 	},
 ]
