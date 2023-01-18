@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 // import dbproduk from "../Config/produkdb.js";
 
-const Produk = mongoose.Schema({
+const Produk = new mongoose.Schema({
     name:{
         type: String,
         required:true
@@ -20,4 +20,4 @@ const Produk = mongoose.Schema({
     }
 });
 
-export default mongoose.model('Produk', Produk)
+export default mongoose.model('Produk', Produk);
