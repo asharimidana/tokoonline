@@ -1,6 +1,6 @@
 import express from "express";
-import router from "./Router/produkRouter.js";
 import mongoose from "mongoose";
+import router from "./Router/produkRouter.js";
 import cors from "cors"; 
 import bodyParser from "body-parser";
 const app= express();
@@ -23,7 +23,7 @@ app.get('/', router)
 
 
 app.use(cors()); 
-app.use(express.json);
+app.use(express.json());
 app.use(router);
 
 

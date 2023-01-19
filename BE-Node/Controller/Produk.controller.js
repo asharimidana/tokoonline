@@ -19,9 +19,10 @@ export const getProdukById = async (req, res) => {
 export const saveProduk = async (req, res) => {
     const produkbaru = new Produk(req.body);
     try {
-        const Respon = new Produk.save();
-            res.status(201).json(Respon);
-    } catch (error) {
-        res.status(404).json({message:error.message}) 
+        const Respon = await produkbaru.save(Produk);
+            res.status(201).json(`Produk berhasil ditambahkan`);
+        }  catch (error) {
+        res.status(400).json({message:error.message}) 
     }
-}
+   
+} 
