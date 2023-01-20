@@ -1,48 +1,52 @@
 .bg-app {
-	background-color: #5c00d5 !Important;
+	background-color: #5c00d5 !important;
 }
-.bg-app-cart{
+.bg-app-cart {
 	background-color: #0000d78f;
 }
 .text-app {
-	color: #004eff !Important;
+	color: #004eff !important;
+}
+.text-app2{
+color:#320074;
 }
 
 /* hover */
-.hov-link>a:hover{
+.hov-link > a:hover {
 	background: #f8f9fa;
-	color: #0d6efd !Important;
+	color: #0d6efd !important;
 }
 
 /* active */
-.hov-link>.nav-link.active{
+.hov-link > .nav-link.active {
 	background: #f8f9fa;
-	color: #0d6efd !Important;
+	color: #0d6efd !important;
 }
 
 /*text*/
-.text-app-footer>p>a, .text-app-footer>p {
-	color: #d6d6d6 ;
+.text-app-footer > p > a,
+.text-app-footer > p {
+	color: #d6d6d6;
 }
 .text-app {
-	color: #5c00d5 !Important ;
+	color: #5c00d5 !important ;
 }
 
-.b-white{
+.b-white {
 	border-color: white;
 }
 
-.btn-app-secondary{
-	color: grey !Important;
+.btn-app-secondary {
+	color: grey !important;
 }
-.btn-app-md{
+.btn-app-md {
 	font-size: 1.5rem;
 }
 
-.btn-app-secondary:hover{
-	color: #5c00d5 !Important;
+.btn-app-secondary:hover {
+	color: #5c00d5 !important;
 }
-.icon-area{
+.icon-area {
 	position: relative;
 }
 .notify {
@@ -55,16 +59,16 @@
 	position: absolute;
 	top: -5px;
 	right: -5px;
-	
 }
-
+.border-hr {
+	border-top: 1px dashed blue;
+}
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+	-webkit-appearance: none;
+	margin: 0;
 }
-input[type=number]{
-    -moz-appearance: textfield;
+input[type="number"] {
+	-moz-appearance: textfield;
 }
-	
