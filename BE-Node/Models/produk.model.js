@@ -1,7 +1,8 @@
 import mongoose from "mongoose";
 // import dbproduk from "../Config/produkdb.js";
 
-const Produk = new mongoose.Schema({
+// const Produk = new mongoose.Schema({
+const Produk = mongoose.Schema({
     name:{
         type: String,
         required:true
