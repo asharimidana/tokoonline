@@ -1,4 +1,3 @@
-import Form from "react-bootstrap/Form";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { CartDb } from "./Cart.js";
@@ -74,6 +73,7 @@ function ConfirmCheckout() {
 		});
 		setCounters(nextCounters);
 	}
+
 	function handleIncrementClick(index) {
 		const nextCounters = counters.map((c, i) => {
 			if (i === index) {
@@ -93,6 +93,7 @@ function ConfirmCheckout() {
 		});
 		setCounters(nextCounters);
 	}
+
 	const currency = function (number) {
 		return new Intl.NumberFormat("id-ID", {
 			style: "currency",
@@ -100,6 +101,7 @@ function ConfirmCheckout() {
 			minimumFractionDigits: 2,
 		}).format(number);
 	};
+
 	return (
 		<div className="bg-light py-4">
 			<div className="container ">
@@ -118,12 +120,18 @@ function ConfirmCheckout() {
 				</div>
 				<div className="bg-white my-3 border pt-2 row">
 					<div className="col-12  ">
-						<h5 className="text-app2">Pesanan</h5>
+						<div>
+							<i
+								className="bi bi-cart-check-fill text-primary me-2"
+								style={{ "font-size": "1.3rem" }}
+							></i>
+							<h5 className="text-primary d-inline">Pesanan</h5>
+						</div>
 						<hr className="border-hr" />
 						<table className="w-100">
 							<tr>
-								<th>img</th>
-								<th>Title</th>
+								<th>Gambar</th>
+								<th>Nama Barang</th>
 								<th>Harga Satuan</th>
 								<th>Jumlah</th>
 								<th className="text-end">Subtotal</th>
@@ -166,60 +174,67 @@ function ConfirmCheckout() {
 						<div className="row">
 							<div className="d-flex justify-content-between">
 								<div className="d-flex">
-									<i className="bi bi-box-seam-fill me-2 text-secondary"></i>
-									<p className="fs-5 text-secondary">Metode Pengiriman</p>
+									<i className="bi bi-box-seam-fill me-2 text-primary"></i>
+									<h5 className=" text-primary">Metode Pengiriman</h5>
 								</div>
 								<p className="text-secondary">
-									Hemat - <small className="text-muted">akan diterima 20-29 Januari 2022</small>
+									Hemat - <small className="text-secondary">akan diterima 20-29 Januari 2022</small>
 								</p>
-								<p className="text-secondary fs-5">Rp. 120.000</p>
+								<p className="text-secondary fw-bold">Rp. 120.000</p>
 							</div>
 							<p className="btn btn-link text-start pt-0">Ubah</p>
 						</div>
 						<div className="row text-end bg-light">
 							<hr className="border-hr" />
-							<p className="text-secondary fs-5">Total (3 roduk): Rp. 200.000</p>
+							<p className="text-secondary fw-bold">Total (3 roduk): Rp. 200.000</p>
 						</div>
 					</div>
 				</div>
 
 				{/*voucer*/}
-				<div className="row py-3 bg-white border mb-3">
+				<div className="row py-3 bg-white p-1 border mb-3">
 					<div className="  d-flex d-flex justify-content-between">
 						<div>
-							<i class="bi fs-5 text-secondary bi-currency-exchange me-2"></i>
-							<p className="fs-5 text-secondary d-inline">Voucher</p>
+							<i className="bi fs-5 text-primary bi-cash-coin me-2"></i>
+							<h5 className="fs-5 text-primary d-inline">Voucher</h5>
 						</div>
 						<div>
-							<button type="button" className="btn btn-link ps-0 text-decoration-none">
+							<button type="button" className="btn btn-link ps-0  text-decoration-none">
 								Ubah
 							</button>
 						</div>
-						<div className="fs-5 text-secondary">-20.000</div>
+						<div className="fw-bold text-secondary">-20.000</div>
 					</div>
 					{/*<hr className="border-hr" />*/}
 				</div>
 				{/*end voucer*/}
 
 				{/* alamat */}
-				<div className="row bg-white mb-3 p-2 border">
-					<p className="text-secondary fs-5">Alamat Pengiriman</p>
-					<hr className="border-hr" />
+				<div className="row bg-white mb-3 p-1 py-2 border">
+					<div className="mb-3 text-primary">
+						<i className="material-icons p-0 me-1 py-2 ">location_on</i>
+						<h5 className=" d-inline pb-3">Alamat Pengiriman</h5>
+					</div>
+					<hr className="border-hr  " />
 					<p className="fs-5 text-secondary m-0">Ashari Midana</p>
 					<p>
 						Percetakan stempel depan tvri, samping mujur motor, KOTA KENDARI - WUA-WUA, SULAWESI TENGGARA,
 						ID 93117
 					</p>
-					<button type="button" className="btn btn-link ps-3 py-0 text-start text-decoration-none">
+					<button
+						type="button"
+						className="btn btn-link ps-3 py-0 text-dangger text-start text-decoration-none"
+					>
 						Ubah
 					</button>
 				</div>
 				{/*end  alamat */}
+
 				<div className="row">
 					<div className="border p-2 bg-white">
 						<div className="">
 							<div className="d-flex py-1 text-secondary">
-								<div style={{ width: "120px" }}></div>
+								<div style={{ width: "120px" }}>Jumlah</div>
 								<div className="text-end">Rp. 300.000</div>
 							</div>
 							<div className="d-flex py-1 text-secondary">
@@ -235,8 +250,8 @@ function ConfirmCheckout() {
 								<div style={{ width: "120px" }}>Total:</div>
 								<div className="text-end text-dark">Rp. 110.000</div>
 							</div>
-							<Link to={"/checkout"} className="btn btn-sm btn-primary" type="button">
-								Buat Pesanan
+							<Link to={"/biling"} className="btn btn-sm btn-primary" type="button">
+								Bayar Sekarang
 							</Link>
 						</div>
 					</div>

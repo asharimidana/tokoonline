@@ -1,6 +1,3 @@
-// import React, { useState, useEffect } from "react";
-// import Sidebar from "../components/SideBar";
-// import MhsList from "./MhsList.js";
 import Banner from "../components/Banner.js";
 import ListProduct from "../components/ListProduct.js";
 import ListProductSpecial from "../components/ListProductSpecial.js";
