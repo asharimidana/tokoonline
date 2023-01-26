@@ -7,8 +7,8 @@
 .text-app {
 	color: #004eff !important;
 }
-.text-app2{
-color:#320074;
+.text-app2 {
+	color: #320074;
 }
 
 /* hover */
@@ -60,6 +60,12 @@ color:#320074;
 	top: -5px;
 	right: -5px;
 }
+
+.edit-profile {
+	position: absolute;
+	top: 80px;
+	right: 55px;
+}
 .border-hr {
 	border-top: 1px dashed blue;
 }
@@ -71,4 +77,17 @@ input::-webkit-inner-spin-button {
 }
 input[type="number"] {
 	-moz-appearance: textfield;
+}
+
+.icon-img-lg {
+	width: 80px;
+}
+.icon-img-xl {
+	width: 120px;
+	height: 120px;
+}
+.con-img-xl {
+	position: relative;
+	width: 120px;
+	height: 120px;
 }

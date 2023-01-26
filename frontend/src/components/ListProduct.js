@@ -8,7 +8,7 @@ function ListProduct() {
 					<div className="col-lg-3 px-2">
 						<div className="card p-2 rounded border border-0">
 							<nav className="nav flex-column nav-pills hov-link">
-								<NavLink to="/1" className="nav-link text-muted">
+								<NavLink to="/" className="nav-link text-muted">
 									Electronics
 								</NavLink>
 								<NavLink to="/2" className="nav-link text-muted">
