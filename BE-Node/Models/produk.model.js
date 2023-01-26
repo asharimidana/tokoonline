@@ -1,8 +1,9 @@
 import mongoose from "mongoose";
+const {Schema} = mongoose;
 // import dbproduk from "../Config/produkdb.js";
 
 // const Produk = new mongoose.Schema({
-const Produk = mongoose.Schema({
+const Produk = new Schema({
     name:{
         type: String,
         required:true
@@ -11,14 +12,14 @@ const Produk = mongoose.Schema({
         type: String,
         required:true
     },
-    stock:{
-        type: Number,
+    stok:{
+        type:Number,
         required:true
     },
     harga:{
-        type: Number,
-        required:true
-    }
+        type:Number,
+        required:true 
+}
 });
 
 export default mongoose.model('Produk', Produk);

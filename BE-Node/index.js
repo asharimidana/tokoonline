@@ -1,12 +1,7 @@
 import express from "express";
 import mongoose from "mongoose";
-<<<<<<< HEAD
 import router from "./Router/produkRouter.js";
-import cors from "cors"; 
-=======
 import cors from "cors";
->>>>>>> origin/master
-import bodyParser from "body-parser";
 const app = express();
 const port = 6000;
 
@@ -27,18 +22,9 @@ db.once("open", () => console.log("Database Connected"));
 
 // app.get("/", router);
 
-<<<<<<< HEAD
-
-app.get('/', router)
-
-
-app.use(cors()); 
-app.use(express.json());
-=======
 app.use(cors());
 app.use(express.json());
 // app.use(express.json); ini salah kurang tanda kurung()
->>>>>>> origin/master
 app.use(router);
 
 app.listen(port, () => {

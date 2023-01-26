@@ -17,25 +17,36 @@ export const getProdukById = async (req, res) => {
 	}
 };
 export const saveProduk = async (req, res) => {
-<<<<<<< HEAD
+
     const produkbaru = new Produk(req.body);
     try {
         const Respon = await produkbaru.save(Produk);
-            res.status(201).json(`Produk berhasil ditambahkan`);
+            res.status(201).json(produkbaru);
         }  catch (error) {
         res.status(400).json({message:error.message}) 
     }
    
-} 
-=======
-	// const produkbaru = new Produk(req.body);
-	const produkbaru = new Produk(req.body);
-	try {
-		// const Respon = new Produk.save();
-		const Respon = await produkbaru.save();
-		res.status(201).json(Respon);
-	} catch (error) {
-		res.status(404).json({ message: error.message });
-	}
 };
->>>>>>> origin/master
+export const updateProduk = async (req, res) => {
+  const id=req.params.id;
+    try {
+        const Responp = await Produk.updateOne({_id:id}, {$set: req.body});
+            res.status(201).json(Responp);
+        }  catch (error) {
+        res.status(400).json({message:error.message}) 
+    }
+   
+};
+export const deleteProduk = async (req, res) => {
+    const cekId= await Produk.findById (req.params.id);
+    if (!cekId) return res.status(404).json("Data tidak ditemukan");
+      try {
+          const Responp = await Produk.deleteOne({_id:req.params.id}, {$set: req.body});
+              res.status(201).json(Responp);
+          }  catch (error) {
+          res.status(400).json({message:error.message}) 
+      }
+     
+  };
+
+
