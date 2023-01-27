@@ -1,6 +1,6 @@
 import express from "express";
 import mongoose from "mongoose";
-import router from "./Router/produkRouter.js";
+import router from "./Router/router.js";
 import cors from "cors";
 const app = express();
 const port = 6000;
@@ -26,6 +26,7 @@ app.use(cors());
 app.use(express.json());
 // app.use(express.json); ini salah kurang tanda kurung()
 app.use(router);
+
 
 app.listen(port, () => {
 	console.log(`Server running di localhost: ${port}`);
