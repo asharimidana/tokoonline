@@ -2,6 +2,9 @@ import express from "express";
 import mongoose from "mongoose";
 import router from "./Router/router.js";
 import cors from "cors";
+import dotenv from "dotenv"
+
+dotenv.config();
 const app = express();
 const port = 6000;
 
@@ -13,7 +16,7 @@ const port = 6000;
 // ini nda perlu ditulis
 
 mongoose.set("strictQuery", false);
-const dbproduk = mongoose.connect("mongodb://127.0.0.1:27017/Toko_Online");
+const dbproduk = mongoose.connect(process.env.DB_URL);
 
 const db = mongoose.connection;
 

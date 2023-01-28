@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 const {Schema} = mongoose;
 
 const authUser= new Schema({
-    nama:{
+    username:{
         type: String,
         required:true
     },

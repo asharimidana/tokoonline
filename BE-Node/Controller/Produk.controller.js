@@ -1,4 +1,6 @@
+
 import Produk from "../Models/produk.model.js";
+
 
 export const getProduk = async (req, res) => {
 	try {

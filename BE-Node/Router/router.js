@@ -1,4 +1,5 @@
 import express from "express";
+//import produk
 import { 
     getProduk,
     getProdukById, 
@@ -6,20 +7,27 @@ import {
     updateProduk,
     deleteProduk} from "../Controller/Produk.controller.js";
 
-import {PostUser} from "../Controller/authUser.contoller.js";
+//import users 
+import {PostUser,
+getuser, login} from "../Controller/authUser.contoller.js";
 
 const router = express.Router();
 
 router.get('/',(req, res) =>{
     res.send('apa')
 });
+//produk
 router.get('/produk', getProduk);
 router.get('/produk/:id', getProdukById);
 router.post ('/produk', saveProduk);
-router.post ('/register', PostUser);
 router.patch('/produk/:id', updateProduk);
 router.delete('/produk/:id', deleteProduk);
+//register
+router.get ('/register', getuser);
+router.post ('/register', PostUser);
 
+//login
+router.post ('/login', login);
 
 
 

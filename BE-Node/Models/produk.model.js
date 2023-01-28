@@ -22,4 +22,4 @@ const Produk = new Schema({
 }
 });
 
-export default mongoose.model('Produk', Produk);
+export default mongoose.model('produks', Produk);
