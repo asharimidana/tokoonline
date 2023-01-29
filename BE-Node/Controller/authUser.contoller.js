@@ -56,7 +56,8 @@ export const login = async (req, res) => {
 	if (!emaiLogin) return res.status(400).json("email anda salah");
 
 	//chek password
-	const validPwd = await bcrypt.compare(req.body.password, authUser.password);
+	// const validPwd = await bcrypt.compare(req.body.password, authUser.password);
+	const validPwd = await bcrypt.compare(req.body.password, emaiLogin.password);
 	if (!validPwd)
 		return res.status(400).json({
 			message: "Password Anda Salah!",
