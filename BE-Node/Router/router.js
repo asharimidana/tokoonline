@@ -8,7 +8,7 @@ import {
     deleteProduk} from "../Controller/Produk.controller.js";
 
 //import users 
-import {PostUser,
+import {signup,
 getuser, login} from "../Controller/authUser.contoller.js";
 
 const router = express.Router();
@@ -24,7 +24,7 @@ router.patch('/produk/:id', updateProduk);
 router.delete('/produk/:id', deleteProduk);
 //register
 router.get ('/register', getuser);
-router.post ('/register', PostUser);
+router.post ('/register', signup);
 
 //login
 router.post ('/login', login);

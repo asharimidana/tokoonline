@@ -14,7 +14,7 @@ export const getuser = async (req, res) => {
 };
 
 //postUser
-export const PostUser = async (req, res) => {
+export const signup = async (req, res) => {
 	//validation
 	const { error } = registvalid(req.body);
 	if (error) return res.status(400).json({ message: error.details[0].message });
@@ -53,20 +53,20 @@ export const login = async (req, res) => {
 	if (error) return res.status(400).json({ message: error.details[0].message });
 
 	// if email exist
-const emaiLogin = await authUSer.findOne({email:req.body.email})
-if (!emaiLogin) return res.status(400).json("email anda salah");
+const user = await authUser.findOne({email:req.body.email})
+if (!user) return res.status(400).json("email anda salah");
 
 //chek password
-const validPwd = await bcrypt.compare(req.body.password, authUSer.password);
+const validPwd = await bcrypt.compare(req.body.password, user.password);
     if(!validPwd) return res.status(400).json({
         message: 'Password Anda Salah!'
 });
-res.send("berhasil login")
+
 // membuat token menggunkan JWT
-// const token = jwt.sign({ _id: authUSer._id }, process.env.SECRET_KEY)
-// res.header('auth-token', token).json({
-// 	token: token
-// })
+const token = jwt.sign({ _id: authUser._id }, process.env.SECRET_KEY)
+res.header('auth-token', token).json({
+	token: token
+})
 
 
 }
