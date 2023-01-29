@@ -8,6 +8,7 @@ import Checkout from "./Pages/Checkout";
 import Biling from "./Pages/Biling";
 
 import Profile from "./Pages/Profile";
+import Order from "./Pages/Order";
 
 import "./App.css";
 function App() {
@@ -22,12 +23,8 @@ function App() {
 				<Route path="/checkout" element={<Checkout />} />
 				<Route path="/biling" element={<Biling />} />
 
-				<Route path="/user/:cat" element={<Profile />} />
-				<Route path="/user/profile" element={<Profile />} />
-				<Route path="/address" element={<Profile />} />
-				<Route path="/shop" element={<Profile />} />
-				<Route path="/notification" element={<Profile />} />
-				<Route path="/password" element={<Profile />} />
+				<Route path="/user/:id" element={<Profile />} />
+				<Route path="/order/:category" element={<Order />} />
 
 				<Route path="/404" element={<NotFound />} />
 				<Route path="/*" element={<Navigate to="/404" />} />

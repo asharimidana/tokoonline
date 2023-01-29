@@ -84,7 +84,10 @@ function NavbarApp() {
 									</Link>
 								</div>
 								<div className="widget-header mx-2">
-									<Link to="/user/profile" className="text-decoration-none btn-app-secondary text-center">
+									<Link
+										to="/user/profile"
+										className="text-decoration-none btn-app-secondary text-center"
+									>
 										<div className="">
 											<i className=" btn-app-md bi-person-fill "></i>
 										</div>
