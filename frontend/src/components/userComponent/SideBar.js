@@ -24,7 +24,7 @@ function SideBar() {
 						<i className="material-icons me-1">location_city</i>
 						<div>Alamat</div>
 					</NavLink>
-					<NavLink to="/user/shop" className="nav-link text-muted d-flex justify-content-start">
+					<NavLink to="/order/dibayar" className="nav-link text-muted d-flex justify-content-start">
 						<i className="material-icons me-1">shopping_cart</i>
 						<div>Pesanan</div>
 					</NavLink>

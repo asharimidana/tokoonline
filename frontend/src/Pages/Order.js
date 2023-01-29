@@ -1,13 +1,12 @@
 import NavbarApp from "../components/NavbarApp";
 import Footer from "../components/Footer";
 
-import Profile from "../components/userComponent/Profile";
 import SideBar from "../components/userComponent/SideBar";
-import Address from "../components/userComponent/Address";
+import OrderStatus from "../components/userComponent/OrderStatus";
 
 import { useParams } from "react-router-dom";
-function UserDasboard() {
-	let { id, category } = useParams();
+function Order() {
+	let { category } = useParams();
 	return (
 		<div>
 			{<NavbarApp />}
@@ -15,10 +14,7 @@ function UserDasboard() {
 				<div className="row p-0 m-0">
 					{<SideBar />}
 					<div className="col-lg-10 bg py-3 rounded bg-light">
-						{id == "profile" ? <Profile /> : ""}
-						{id == "address" ? <Address /> : ""}
-						{id == "notifications" ? <Address /> : ""}
-						{id == "password" ? <Address /> : ""}
+						{category == "dibayar" ? <OrderStatus /> : ""}
 					</div>
 				</div>
 			</div>
@@ -27,4 +23,4 @@ function UserDasboard() {
 		</div>
 	);
 }
-export default UserDasboard;
+export default Order;

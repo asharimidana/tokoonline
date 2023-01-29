@@ -23,7 +23,7 @@ function Profile() {
 					</div>
 					<div>
 						<Form.Label>Jenis Kelamin</Form.Label>
-						<Form.Check type="radio" id="default-radio" label="Laki-laki" defaultChecked/>
+						<Form.Check type="radio" id="default-radio" label="Laki-laki" defaultChecked />
 						<Form.Check type="radio" id="default-radi" label="Perempuan" />
 					</div>
 					<div className="mb-2" style={{ width: "170px" }}>

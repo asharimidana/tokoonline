@@ -15,3 +15,13 @@ progres kerja profile
     gambar
     ukuran gambar max 1mb
     format jpeg, jpg, png
+
+    ALAMAT:
+    Jalan
+    desa/Kelurahan,
+    kecamatan,
+    Kabupaten,
+    Provinsi,
+    Kode Pos
+
+    Alamat lainnya (misal rumah perumahan, atau dekat gedung)
